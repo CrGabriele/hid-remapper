@@ -219,7 +219,7 @@ bool is_expr_valid(uint8_t expr) {
             case Op::SIN:
             case Op::COS:
             case Op::LN:
-            case Op::LOG:
+            case Op::LOG://added logaritm
             case Op:.LOG10:
             case Op::RELU:
             case Op::STICKY_STATE:
