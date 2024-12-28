@@ -220,7 +220,7 @@ bool is_expr_valid(uint8_t expr) {
             case Op::COS:
             case Op::LN:
             case Op::LOG:
-            case Op:.LOG10:
+            case Op::LOG10:
             case Op::RELU:
             case Op::STICKY_STATE:
             case Op::TAP_STATE:
