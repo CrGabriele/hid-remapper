@@ -108,7 +108,7 @@ enum class Op : int8_t {
     PLUGGED_IN = 50,
     LN = 51,
     LOG = 52,
-    LOG10 = 53
+    LOG10 = 53,
 };
 
 struct tap_hold_state_t {
