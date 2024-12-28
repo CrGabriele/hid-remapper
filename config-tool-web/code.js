@@ -112,6 +112,10 @@ const ops = {
     "TIME_SEC": 48,
     "LT": 49,
     "PLUGGED_IN": 50,
+    LN = 51,
+    LOG = 52,
+    LOG10 = 53,
+    
 }
 
 const opcodes = Object.fromEntries(Object.entries(ops).map(([key, value]) => [value, key]));
