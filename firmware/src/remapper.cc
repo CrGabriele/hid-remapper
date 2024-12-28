@@ -218,6 +218,9 @@ bool is_expr_valid(uint8_t expr) {
             case Op::ABS:
             case Op::SIN:
             case Op::COS:
+            case Op::LN:
+            case Op::LOG:
+            case Op:.LOG10:
             case Op::RELU:
             case Op::STICKY_STATE:
             case Op::TAP_STATE:
@@ -843,6 +846,15 @@ int32_t eval_expr(uint8_t expr, uint64_t now, bool auto_repeat) {
                 break;
             case Op::COS:
                 stack[ptr] = cosf((float) stack[ptr] * 3.14159265f / 180000.0f) * 1000;
+                break;
+            case Op::LN:
+                stack[ptr] = logf((float) stack[ptr]);
+                break;
+            case Op::LOG:
+                stack[ptr] = log2f((float) stack[ptr]);
+                break;
+            case Op::LOG10:
+                stack[ptr] = log10f((float) stack[ptr]);
                 break;
             case Op::DEBUG:
                 debug = true;
